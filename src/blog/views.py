@@ -1,10 +1,10 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.db.models import Q
 from django.http import HttpResponse
-from django.contrib import messages
 
 from blog.models import BlogPost
 from blog.forms import CreateBlogPostForm, UpdateBlogPostForm
+
 from account.models import Account
 
 
@@ -22,7 +22,6 @@ def create_blog_view(request):
         obj.author = author
         obj.save()
         form = CreateBlogPostForm()
-        messages.success(request, 'Blog is successfully submitted')
 
     context['form'] = form
 
@@ -48,7 +47,7 @@ def edit_blog_view(request, slug):
     blog_post = get_object_or_404(BlogPost, slug=slug)
 
     if blog_post.author != user:
-        return HttpResponse('You are not the author of that post.')
+        return HttpResponse("You are not the author of that post.")
 
     if request.POST:
         form = UpdateBlogPostForm(request.POST or None, request.FILES or None, instance=blog_post)
