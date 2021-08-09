@@ -37,7 +37,7 @@ pyOpenSSL==18.0.0
 PySocks==1.6.8
 python-dateutil==2.8.1
 pytz==2019.3
-pywin32==223
+pywin32==301
 requests==2.18.4
 ruamel-yaml==0.15.37
 selenium==3.141.0
