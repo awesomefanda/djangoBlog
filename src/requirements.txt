@@ -18,7 +18,7 @@ elasticsearch==7.1.0
 factory-boy==2.9.2
 Faker==4.0.3
 idna==2.6
-ipython==6.2.1
+ipython==7.16.3
 ipython-genutils==0.2.0
 jedi==0.17.0
 Kivy==1.11.1
